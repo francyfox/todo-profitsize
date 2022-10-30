@@ -1,0 +1,104 @@
+@import './base.css';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--c-bg-dark);
+  color: var(--c-text);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+
+  &:after {
+    width: 100vw;
+    height: 100vw;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: 0vw;
+    background: radial-gradient(circle at center, var(--c-bg-light) 10%, var(--c-bg-dark) 50%);
+    animation:  bgPosTranslate 15s linear infinite;
+    will-change: transform;
+    z-index: -1;
+  }
+}
+
+a {
+  color: var(--c-primary);
+  transition: color .1s ease-in-out;
+
+  &:hover {
+    color: var(--c-primary-hover);
+  }
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.wrap {
+  position: relative;
+
+  .card-tops {
+    left: 4px;
+    top: -30px;
+    width: calc(420px - 79px);
+    height: 115px;
+    position: absolute;
+    display: block;
+
+    background: linear-gradient(180deg, #4F5565 0%, #000000 53.65%);
+    border-radius: 20px;
+    transform: rotate(-4.48deg);
+
+
+
+    &:after {
+      left: -4px;
+      top: 15px;
+      position: absolute;
+      content: '';
+      width: calc(420px - 25px);
+      height: 115px;
+      display: block;
+      background: linear-gradient(180deg, #31394D 0%, #091739 100%);
+      border-radius: 20px;
+      transform: rotate(2.32deg);
+    }
+  }
+}
+
+.todo {
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  background: var(--c-bg-light);
+  border-radius: 20px 0px 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
+
+  .head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@keyframes bgPosTranslate {
+  from { transform: rotate(180deg) translateX(150px) rotate(180deg); }
+  to   { transform: rotate(540deg) translateX(150px) rotate(540deg); }
+}
