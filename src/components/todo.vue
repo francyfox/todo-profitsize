@@ -46,6 +46,10 @@
           ADD ITEM
         </button>
       </div>
+
+      <footer>
+        © 2022. Golota Danil. <a href="https://github.com/francyfox/todo-profitsize">Repository</a>
+      </footer>
     </div>
   </div>
 </template>
@@ -66,6 +70,27 @@ export default defineComponent({
       },
 
       list: [
+        {
+          item: {
+            state: false,
+            title: 'delectus aut autem',
+            subTitle: 'laboriosam mollitia et enim quasi adipisci quia provident illum'
+          }
+        },
+        {
+          item: {
+            state: true,
+            title: 'delectus aut autem',
+            subTitle: 'laboriosam mollitia et enim quasi adipisci quia provident illum'
+          }
+        },
+        {
+          item: {
+            state: false,
+            title: 'delectus aut autem',
+            subTitle: 'laboriosam mollitia et enim quasi adipisci quia provident illum'
+          }
+        },
         {
           item: {
             state: false,

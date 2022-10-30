@@ -1,0 +1,28 @@
+:root {
+    --c-bg-light: #252E42;
+    --c-bg-dark: #161C2E;
+    --c-primary: #FF8469;
+    --c-primary-hover: #D95133;
+    --c-text: #FFFFFF;
+    --c-text-disabled: #4F5565;
+
+    --fz-secondary: 12px;
+    --fz-btn: 14px;
+    --fz-footer: 16px;
+    --fz-primary: 22px;
+    --fz-h1: 28px;
+
+
+    --mw-card: 420px;
+}
+
+
+@media only screen and (max-width: 560px) {
+    :root {
+        --fz-footer: 12px;
+        --fz-primary: 20px;
+        --fz-h1: 23px;
+
+        --mw-card: 320px;
+    }
+}
